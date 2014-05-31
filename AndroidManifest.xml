@@ -7,9 +7,10 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
     <application
         android:allowBackup="true"
@@ -25,8 +26,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-        
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.hackanooga.devLearn.lessonListActivity"
+            android:label="@string/title_lesson_list" >
+        </activity>
+        <activity
+            android:name="com.hackanooga.devLearn.lessonDetailActivity"
+            android:label="@string/title_lesson_detail"
+            android:parentActivityName="com.hackanooga.devLearn.lessonListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hackanooga.devLearn.lessonListActivity" />
+        </activity>
     </application>
 
 </manifest>
