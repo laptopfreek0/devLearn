@@ -10,15 +10,19 @@ import android.app.FragmentTransaction;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
+	
+	ProgressBar progress;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -39,8 +43,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        progress = (ProgressBar)findViewById(R.id.tutorial_progress);
 
-
+        
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -49,6 +55,7 @@ public class MainActivity extends Activity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setOnPageChangeListener(page_change_listener);
 
     }
 
@@ -60,6 +67,43 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
+    public OnPageChangeListener page_change_listener = new OnPageChangeListener() {
+
+		@Override
+		public void onPageScrollStateChanged(int arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onPageScrolled(int arg0, float arg1, int arg2) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onPageSelected(int arg0) {
+			switch (arg0) {
+				case 0:
+					progress.setProgress(0);
+					break;
+				case 1:
+					progress.setProgress(33);
+					break;
+				case 2:
+					progress.setProgress(66);
+					break;
+				case 3:
+					progress.setProgress(100);
+					break;
+			}
+			
+			
+		}
+    	
+    };
+    
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -148,7 +192,7 @@ public class MainActivity extends Activity {
         	switch (tutorial_page) {
 	    		case 1:
 	    		default:
-    			rootView = inflater.inflate(R.layout.fragment_tutorial_page_1, container, false);
+	    			rootView = inflater.inflate(R.layout.fragment_tutorial_page_1, container, false);
     			break;
         		case 2:
         			rootView = inflater.inflate(R.layout.fragment_tutorial_page_2, container, false);
