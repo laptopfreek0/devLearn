@@ -24,3 +24,6 @@ proguard/
 
 #Log Files
 *.log
+
+# Prevent clashes with other contributors
+project.properties
