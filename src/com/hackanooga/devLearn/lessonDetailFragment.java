@@ -2,6 +2,7 @@ package com.hackanooga.devLearn;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +57,19 @@ public class lessonDetailFragment extends Fragment {
 		if (mItem != null) {
 			((TextView) rootView.findViewById(R.id.lesson_detail))
 					.setText(mItem.content);
+			if (mItem.array_name == "html_lessons") {
+				this.getResources().getStringArray(R.array.html_lessons);
+			} else if (mItem.array_name == "css_lessons") {
+				this.getResources().getStringArray(R.array.css_lessons);
+			} else if (mItem.array_name == "javascript_lessons") {
+				this.getResources().getStringArray(R.array.javascript_lessons);
+			} else if (mItem.array_name == "php_lessons") {
+				this.getResources().getStringArray(R.array.php_lessons);
+			} else {
+				// Error
+				Log.e("Lesson Details", "You Shouldn't be here");
+			}
+			
 		}
 
 		return rootView;

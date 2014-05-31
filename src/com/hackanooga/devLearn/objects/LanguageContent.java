@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.hackanooga.devLearn.lessonListActivity;
+
+
 /**
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
@@ -25,10 +28,10 @@ public class LanguageContent {
 
 	static {
 		// Add The Language List
-		addItem(new LanguageItem("1", "HTML"));
-		addItem(new LanguageItem("2", "CSS"));
-		addItem(new LanguageItem("3", "JavaScript"));
-		addItem(new LanguageItem("4", "PHP"));
+		addItem(new LanguageItem("1", "HTML", "html_lessons"));
+		addItem(new LanguageItem("2", "CSS", "css_lessons"));
+		addItem(new LanguageItem("3", "JavaScript", "javascript_lessons"));
+		addItem(new LanguageItem("4", "PHP", "php_lessons"));
 	}
 
 	private static void addItem(LanguageItem item) {
@@ -42,10 +45,12 @@ public class LanguageContent {
 	public static class LanguageItem {
 		public String id;
 		public String content;
+		public String array_name;
 
-		public LanguageItem(String id, String content) {
+		public LanguageItem(String id, String content, String array_name) {
 			this.id = id;
 			this.content = content;
+			this.array_name = array_name;
 		}
 
 		@Override

@@ -1,0 +1,32 @@
+<resources>
+    
+    <string-array name="javascript_lessons">
+        <item>Basics</item>
+        <item>Variables</item>
+        <item>Functions</item>
+        <item>Objects</item>
+    </string-array>
+    
+    <string-array name="html_lessons">
+        <item>Basics</item>
+        <item>Variables</item>
+        <item>Functions</item>
+        <item>Objects</item>
+    </string-array>
+    
+    <string-array name="css_lessons">
+        <item>Basics</item>
+        <item>Variables</item>
+        <item>Functions</item>
+        <item>Objects</item>
+    </string-array>
+    
+    <string-array name="php_lessons">
+        <item>Basics</item>
+        <item>Variables</item>
+        <item>Functions</item>
+        <item>Objects</item>
+    </string-array>
+    
+    
+</resources>
