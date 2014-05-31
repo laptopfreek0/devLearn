@@ -11,27 +11,27 @@ import java.util.Map;
  * <p>
  * TODO: Replace all uses of this class before publishing your app.
  */
-public class DummyContent {
+public class LanguageContent {
 
 	/**
 	 * An array of sample (dummy) items.
 	 */
-	public static List<DummyItem> ITEMS = new ArrayList<DummyItem>();
+	public static List<LanguageItem> ITEMS = new ArrayList<LanguageItem>();
 
 	/**
 	 * A map of sample (dummy) items, by ID.
 	 */
-	public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
+	public static Map<String, LanguageItem> ITEM_MAP = new HashMap<String, LanguageItem>();
 
 	static {
-		// Add 3 sample items.
-		addItem(new DummyItem("1", "HTML"));
-		addItem(new DummyItem("2", "CSS"));
-		addItem(new DummyItem("3", "JavaScript"));
-		addItem(new DummyItem("4", "PHP"));
+		// Add The Language List
+		addItem(new LanguageItem("1", "HTML"));
+		addItem(new LanguageItem("2", "CSS"));
+		addItem(new LanguageItem("3", "JavaScript"));
+		addItem(new LanguageItem("4", "PHP"));
 	}
 
-	private static void addItem(DummyItem item) {
+	private static void addItem(LanguageItem item) {
 		ITEMS.add(item);
 		ITEM_MAP.put(item.id, item);
 	}
@@ -39,11 +39,11 @@ public class DummyContent {
 	/**
 	 * A dummy item representing a piece of content.
 	 */
-	public static class DummyItem {
+	public static class LanguageItem {
 		public String id;
 		public String content;
 
-		public DummyItem(String id, String content) {
+		public LanguageItem(String id, String content) {
 			this.id = id;
 			this.content = content;
 		}

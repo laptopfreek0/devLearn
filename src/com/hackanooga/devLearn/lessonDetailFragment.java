@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.hackanooga.devLearn.objects.DummyContent;
+import com.hackanooga.devLearn.objects.LanguageContent;
 
 /**
  * A fragment representing a single lesson detail screen. This fragment is
@@ -24,7 +24,7 @@ public class lessonDetailFragment extends Fragment {
 	/**
 	 * The dummy content this fragment is presenting.
 	 */
-	private DummyContent.DummyItem mItem;
+	private LanguageContent.LanguageItem mItem;
 
 	/**
 	 * Mandatory empty constructor for the fragment manager to instantiate the
@@ -41,7 +41,7 @@ public class lessonDetailFragment extends Fragment {
 			// Load the dummy content specified by the fragment
 			// arguments. In a real-world scenario, use a Loader
 			// to load content from a content provider.
-			mItem = DummyContent.ITEM_MAP.get(getArguments().getString(
+			mItem = LanguageContent.ITEM_MAP.get(getArguments().getString(
 					ARG_ITEM_ID));
 		}
 	}
