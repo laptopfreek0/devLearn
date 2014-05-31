@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.hackanooga.devLearn.dummy.DummyContent;
+import com.hackanooga.devLearn.objects.DummyContent;
 
 /**
  * A list fragment representing a list of Lessons. This fragment also supports

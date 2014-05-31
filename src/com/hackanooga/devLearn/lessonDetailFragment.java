@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.hackanooga.devLearn.dummy.DummyContent;
+import com.hackanooga.devLearn.objects.DummyContent;
 
 /**
  * A fragment representing a single lesson detail screen. This fragment is
