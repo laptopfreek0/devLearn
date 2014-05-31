@@ -12,4 +12,158 @@
         android:id="@+id/section_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/section_label"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="42dp"
+        android:layout_toRightOf="@+id/section_label"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/ImageView01"
+        android:layout_marginLeft="11dp"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView03"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/ImageView01"
+        android:layout_below="@+id/section_label"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="11dp"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView04"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/ImageView03"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView06"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/ImageView04"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView07"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/ImageView06"
+        android:layout_alignTop="@+id/ImageView02"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="7dp"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView11"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/ImageView04"
+        android:layout_alignTop="@+id/ImageView07"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView05"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/ImageView08"
+        android:layout_below="@+id/ImageView02"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView13"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ImageView11"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@+id/ImageView03"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView14"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ImageView13"
+        android:layout_toRightOf="@+id/ImageView13"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/section_label"
+        android:layout_below="@+id/ImageView14"
+        android:layout_marginTop="37dp"
+        android:gravity="center_horizontal"
+        android:text="@string/tutorial_points" />
+
+    <ImageView
+        android:id="@+id/ImageView09"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/textView1"
+        android:layout_toRightOf="@+id/ImageView02"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/ImageView08"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/ImageView02"
+        android:layout_alignTop="@+id/section_label"
+        android:layout_marginLeft="13dp"
+        android:contentDescription="@string/tutorial_points"
+        android:scaleType="fitXY"
+        android:src="@drawable/points" />
+
 </RelativeLayout>
