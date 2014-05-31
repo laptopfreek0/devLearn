@@ -13,8 +13,10 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
@@ -51,7 +53,7 @@ public class MainActivity extends Activity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        mViewPager.setOnPageChangeListener(page_change_listener);
+        mViewPager.setOnPageChangeListener(pageChangeListener);
 
     }
 
@@ -64,7 +66,7 @@ public class MainActivity extends Activity {
         return true;
     }
     
-    public OnPageChangeListener page_change_listener = new OnPageChangeListener() {
+    public OnPageChangeListener pageChangeListener = new OnPageChangeListener() {
 
 		@Override
 		public void onPageScrollStateChanged(int arg0) {
@@ -91,10 +93,23 @@ public class MainActivity extends Activity {
 					progress.setProgress(66);
 					break;
 				case 3:
+					com.google.android.gms.common.SignInButton signInButton = 
+						(com.google.android.gms.common.SignInButton) findViewById(R.id.google_sign_in_button);
+					signInButton.setOnClickListener(plusButtonListener);
 					progress.setProgress(100);
 					break;
 			}
 			
+			
+		}
+    	
+    };
+    
+    public OnClickListener plusButtonListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			Toast.makeText(MainActivity.this,"YOLO", Toast.LENGTH_SHORT).show();
 			
 		}
     	
