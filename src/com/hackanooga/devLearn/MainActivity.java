@@ -143,9 +143,25 @@ public class MainActivity extends Activity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_tutorial_page_1, container, false);
+        	int tutorial_page = getArguments().getInt(ARG_SECTION_NUMBER);
+        	View rootView;
+        	switch (tutorial_page) {
+	    		case 1:
+	    		default:
+    			rootView = inflater.inflate(R.layout.fragment_tutorial_page_1, container, false);
+    			break;
+        		case 2:
+        			rootView = inflater.inflate(R.layout.fragment_tutorial_page_2, container, false);
+        			break;
+        		case 3:
+        			rootView = inflater.inflate(R.layout.fragment_tutorial_page_3, container, false);
+        			break;
+        		case 4:
+        			rootView = inflater.inflate(R.layout.fragment_tutorial_page_4, container, false);
+        			break;
+        	}
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+            textView.setText(Integer.toString(tutorial_page));
             return rootView;
         }
     }
