@@ -60,7 +60,6 @@ public class lessonListActivity extends FragmentActivity implements
 			// In two-pane mode, show the detail view in this activity by
 			// adding or replacing the detail fragment using a
 			// fragment transaction.
-			Log.i("YOLO", "YOLO1");
 			Bundle arguments = new Bundle();
 			arguments.putString(lessonDetailFragment.ARG_ITEM_ID, id);
 			lessonDetailFragment fragment = new lessonDetailFragment();
@@ -71,7 +70,6 @@ public class lessonListActivity extends FragmentActivity implements
 		} else {
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
-			Log.i("YOLO", "YOLO1");
 			Intent detailIntent = new Intent(this, lessonDetailActivity.class);
 			detailIntent.putExtra(lessonDetailFragment.ARG_ITEM_ID, id);
 			startActivity(detailIntent);
