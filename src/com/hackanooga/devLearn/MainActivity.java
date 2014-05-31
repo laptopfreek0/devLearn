@@ -204,8 +204,6 @@ public class MainActivity extends Activity {
         			rootView = inflater.inflate(R.layout.fragment_tutorial_page_4, container, false);
         			break;
         	}
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(Integer.toString(tutorial_page));
             return rootView;
         }
     }
