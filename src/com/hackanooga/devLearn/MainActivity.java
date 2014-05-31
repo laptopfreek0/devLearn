@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -44,7 +45,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         progress = (ProgressBar)findViewById(R.id.tutorial_progress);
-
+        
+        if (true) {
+        	// Bypass Tutorial for coding
+        	//TODO remove me at a later point in time
+        	plusButtonListener.onClick(progress);
+        }
+        
+        
         
 
         // Create the adapter that will return a fragment for each of the three
