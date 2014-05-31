@@ -9,19 +9,19 @@ import android.util.Log;
  * An activity representing a list of Lessons. This activity has different
  * presentations for handset and tablet-size devices. On handsets, the activity
  * presents a list of items, which when touched, lead to a
- * {@link lessonDetailActivity} representing item details. On tablets, the
+ * {@link LanguageDetailActivity} representing item details. On tablets, the
  * activity presents the list of items and item details side-by-side using two
  * vertical panes.
  * <p>
  * The activity makes heavy use of fragments. The list of items is a
- * {@link lessonListFragment} and the item details (if present) is a
- * {@link lessonDetailFragment}.
+ * {@link LanguageListFragment} and the item details (if present) is a
+ * {@link LanguageDetailFragment}.
  * <p>
  * This activity also implements the required
- * {@link lessonListFragment.Callbacks} interface to listen for item selections.
+ * {@link LanguageListFragment.Callbacks} interface to listen for item selections.
  */
-public class lessonListActivity extends FragmentActivity implements
-		lessonListFragment.Callbacks {
+public class LanguageListActivity extends FragmentActivity implements
+		LanguageListFragment.Callbacks {
 
 	/**
 	 * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -43,7 +43,7 @@ public class lessonListActivity extends FragmentActivity implements
 
 			// In two-pane mode, list items should be given the
 			// 'activated' state when touched.
-			((lessonListFragment) getSupportFragmentManager().findFragmentById(
+			((LanguageListFragment) getSupportFragmentManager().findFragmentById(
 					R.id.lesson_list)).setActivateOnItemClick(true);
 		}
 
@@ -51,7 +51,7 @@ public class lessonListActivity extends FragmentActivity implements
 	}
 
 	/**
-	 * Callback method from {@link lessonListFragment.Callbacks} indicating that
+	 * Callback method from {@link LanguageListFragment.Callbacks} indicating that
 	 * the item with the given ID was selected.
 	 */
 	@Override
@@ -61,8 +61,8 @@ public class lessonListActivity extends FragmentActivity implements
 			// adding or replacing the detail fragment using a
 			// fragment transaction.
 			Bundle arguments = new Bundle();
-			arguments.putString(lessonDetailFragment.ARG_ITEM_ID, id);
-			lessonDetailFragment fragment = new lessonDetailFragment();
+			arguments.putString(LanguageDetailFragment.ARG_ITEM_ID, id);
+			LanguageDetailFragment fragment = new LanguageDetailFragment();
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
 					.replace(R.id.lesson_detail_container, fragment).commit();
@@ -70,8 +70,8 @@ public class lessonListActivity extends FragmentActivity implements
 		} else {
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
-			Intent detailIntent = new Intent(this, lessonDetailActivity.class);
-			detailIntent.putExtra(lessonDetailFragment.ARG_ITEM_ID, id);
+			Intent detailIntent = new Intent(this, LanguageDetailActivity.class);
+			detailIntent.putExtra(LanguageDetailFragment.ARG_ITEM_ID, id);
 			startActivity(detailIntent);
 		}
 	}

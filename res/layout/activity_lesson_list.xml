@@ -19,13 +19,13 @@
 
 	<fragment
 	    android:id="@+id/lesson_list"
-	    android:name="com.hackanooga.devLearn.lessonListFragment"
+	    android:name="com.hackanooga.devLearn.LanguageListFragment"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:layout_marginLeft="16dp"
 	    android:layout_marginRight="16dp"
 	    android:layout_marginTop="10dp"
-	    tools:context="com.hackanooga.devLearn.lessonListActivity"
+	    tools:context="com.hackanooga.devLearn.LanguageListActivity"
 	    tools:layout="@android:layout/list_content" />
 	
 </LinearLayout>

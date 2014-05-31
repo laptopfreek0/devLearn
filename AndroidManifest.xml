@@ -32,16 +32,16 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="com.hackanooga.devLearn.lessonListActivity"
+            android:name="com.hackanooga.devLearn.LanguageListActivity"
             android:label="@string/title_lesson_list" >
         </activity>
         <activity
-            android:name="com.hackanooga.devLearn.lessonDetailActivity"
+            android:name="com.hackanooga.devLearn.LanguageDetailActivity"
             android:label="@string/title_lesson_detail"
-            android:parentActivityName="com.hackanooga.devLearn.lessonListActivity" >
+            android:parentActivityName="com.hackanooga.devLearn.LanguageListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.hackanooga.devLearn.lessonListActivity" />
+                android:value="com.hackanooga.devLearn.LanguageListActivity" />
         </activity>
     </application>
 

@@ -12,10 +12,10 @@ import com.hackanooga.devLearn.objects.LanguageContent;
 
 /**
  * A fragment representing a single lesson detail screen. This fragment is
- * either contained in a {@link lessonListActivity} in two-pane mode (on
- * tablets) or a {@link lessonDetailActivity} on handsets.
+ * either contained in a {@link LanguageListActivity} in two-pane mode (on
+ * tablets) or a {@link LanguageDetailActivity} on handsets.
  */
-public class lessonDetailFragment extends Fragment {
+public class LanguageDetailFragment extends Fragment {
 	/**
 	 * The fragment argument representing the item ID that this fragment
 	 * represents.
@@ -31,7 +31,7 @@ public class lessonDetailFragment extends Fragment {
 	 * Mandatory empty constructor for the fragment manager to instantiate the
 	 * fragment (e.g. upon screen orientation changes).
 	 */
-	public lessonDetailFragment() {
+	public LanguageDetailFragment() {
 	}
 
 	@Override

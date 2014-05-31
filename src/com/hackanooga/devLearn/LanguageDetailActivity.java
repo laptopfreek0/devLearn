@@ -10,12 +10,12 @@ import android.view.MenuItem;
 /**
  * An activity representing a single lesson detail screen. This activity is only
  * used on handset devices. On tablet-size devices, item details are presented
- * side-by-side with a list of items in a {@link lessonListActivity}.
+ * side-by-side with a list of items in a {@link LanguageListActivity}.
  * <p>
  * This activity is mostly just a 'shell' activity containing nothing more than
- * a {@link lessonDetailFragment}.
+ * a {@link LanguageDetailFragment}.
  */
-public class lessonDetailActivity extends FragmentActivity {
+public class LanguageDetailActivity extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +38,9 @@ public class lessonDetailActivity extends FragmentActivity {
 			// Create the detail fragment and add it to the activity
 			// using a fragment transaction.
 			Bundle arguments = new Bundle();
-			arguments.putString(lessonDetailFragment.ARG_ITEM_ID, getIntent()
-					.getStringExtra(lessonDetailFragment.ARG_ITEM_ID));
-			lessonDetailFragment fragment = new lessonDetailFragment();
+			arguments.putString(LanguageDetailFragment.ARG_ITEM_ID, getIntent()
+					.getStringExtra(LanguageDetailFragment.ARG_ITEM_ID));
+			LanguageDetailFragment fragment = new LanguageDetailFragment();
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.lesson_detail_container, fragment).commit();
@@ -59,7 +59,7 @@ public class lessonDetailActivity extends FragmentActivity {
 			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 			//
 			NavUtils.navigateUpTo(this, new Intent(this,
-					lessonListActivity.class));
+					LanguageListActivity.class));
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

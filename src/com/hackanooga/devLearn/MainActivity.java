@@ -118,7 +118,7 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onClick(View v) {
-			Intent intent = new Intent(MainActivity.this, lessonListActivity.class);
+			Intent intent = new Intent(MainActivity.this, LanguageListActivity.class);
 			startActivity(intent);
 			
 		}

@@ -21,7 +21,7 @@
 	    android:divider="?android:attr/dividerHorizontal"
 	    android:orientation="horizontal"
 	    android:showDividers="middle"
-	    tools:context="com.hackanooga.devLearn.lessonListActivity" >
+	    tools:context="com.hackanooga.devLearn.LanguageListActivity" >
 	
 	    <!--
 	    This layout is a two-pane layout for the Lessons
@@ -36,7 +36,7 @@
 	
 	    <fragment
 	        android:id="@+id/lesson_list"
-	        android:name="com.hackanooga.devLearn.lessonListFragment"
+	        android:name="com.hackanooga.devLearn.LanguageListFragment"
 	        android:layout_width="0dp"
 	        android:layout_height="match_parent"
 	        android:layout_weight="1"
