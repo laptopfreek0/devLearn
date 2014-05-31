@@ -8,9 +8,60 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.hackanooga.devLearn.MainActivity$PlaceholderFragment" >
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:contentDescription="@string/tutorial_lives"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="167dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:contentDescription="@string/tutorial_lives"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignLeft="@+id/ImageView01"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="29dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/ImageView03"
+        android:contentDescription="@string/tutorial_lives"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:contentDescription="@string/tutorial_lives"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginRight="23dp"
+        android:layout_toLeftOf="@+id/ImageView03"
+        android:scaleType="fitXY"
+        android:src="@drawable/heart" />
+
     <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImageView01"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="@string/tutorial_lives" />
 
 </RelativeLayout>
