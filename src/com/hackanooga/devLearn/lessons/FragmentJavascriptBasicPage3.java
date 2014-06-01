@@ -21,7 +21,7 @@ public class FragmentJavascriptBasicPage3 extends FragmentBasicClass {
 		
 		// Setup Lesson
 		lesson = new Lesson();
-		lesson.setIntroduction("alert\nThe alert......");
+		lesson.setIntroduction("alert\nThe alert() method displays an alert box with a specified message and an OK button.");
 		// Not you need android 4.2+
 		lesson.setHtmlSource("<html><body><script>alert('Hello World!');</script></body</html>");
 		lesson.setHtmlTruncatedSource("<html>\n\t<body>\n\t\t...\n\t\t<script>\n\t\t\talert('Hello World!');\n\t\t</script>\n\t</body>\n</html>");
