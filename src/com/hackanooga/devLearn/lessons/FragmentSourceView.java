@@ -21,7 +21,7 @@ public class FragmentSourceView extends FragmentBasicClass {
 		} else if (LessonActivity.lesson_page == 3) {
 			// Page 3
 			source.setText(FragmentJavascriptBasicPage3.lesson.getHtmlTruncatedSource());
-		}
+		}  
 		
 		
 		return view;

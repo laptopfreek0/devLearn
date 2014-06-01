@@ -21,6 +21,7 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -94,13 +95,23 @@ public class FragmentBasicClass extends Fragment{
     		String html = code.getText().toString();
     		String key = (String)code.getTag();
     		
-    		LinearLayout layout = (LinearLayout)v.findViewById(R.id.quiz_code);
-    		for (int i = 0; i < layout.getChildCount(); i++) {
-    			View view = layout.getChildAt(i);
+    		View layout = ((RelativeLayout)v.getParent().getParent()).findViewById(R.id.quiz_code);
+    		for (int i = 0; i < ((ViewGroup) layout).getChildCount(); i++) {
+    			View view = ((ViewGroup) layout).getChildAt(i);
     			
     			if (view instanceof Button) {
+    				// Already populated
     				
     			} else {
+    	    		Button button = new Button(view.getContext());
+    	    		button.setTextSize(10);
+    	    		ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 80);
+    	    		button.setLayoutParams(params);
+    	    		button.setText(html);
+    	    		button.setTag(key);
+    				((ViewGroup) layout).addView(button, i);
+    				((ViewGroup) layout).removeView(view);
+    				break;
     				
     			}
     		}
