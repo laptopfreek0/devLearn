@@ -1,18 +1,26 @@
 package com.hackanooga.devLearn.lessons;
 
+import org.apache.http.NameValuePair;
+
 import com.hackanooga.devLearn.LessonActivity;
 import com.hackanooga.devLearn.R;
 import com.hackanooga.devLearn.objects.Lesson;
+import com.hackanooga.devLearn.objects.Quiz;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -21,6 +29,7 @@ import android.widget.Toast;
 public class FragmentBasicClass extends Fragment{
 	
 	private Lesson lesson;
+	private Quiz quiz;
 	
     public OnClickListener nextListener = new OnClickListener() {
 
@@ -37,6 +46,43 @@ public class FragmentBasicClass extends Fragment{
 		}
     
     };
+    
+    public void createQuiz(View view, Quiz quiz) {
+    	this.quiz = quiz;
+    	TextView tv = (TextView) view.findViewById(R.id.quiz_textView);
+    	tv.setText(quiz.getPoints() + " Points - " + quiz.getInstructions());
+    	
+    	LinearLayout layout = (LinearLayout)view.findViewById(R.id.quiz_code);
+    	
+    	for (int i = 0; i < quiz.getAnswer().size(); i++) {
+    		ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 2);
+    		
+    		View blank = new View(view.getContext());
+    		blank.setBackgroundColor(Color.BLACK);
+    		layout.addView(blank, params);
+    		
+    		final ViewGroup.MarginLayoutParams lpt = (ViewGroup.MarginLayoutParams)blank.getLayoutParams();
+    		lpt.setMargins(40,80,40,lpt.bottomMargin);
+    	}
+    	
+    	int i = 0;
+    	for (NameValuePair code : quiz.getCode()) {
+    		if (i < 3) {
+    			layout = (LinearLayout)view.findViewById(R.id.quiz_select_line1);
+    		} else {
+    			layout = (LinearLayout)view.findViewById(R.id.quiz_select_line2);
+    		}
+    		
+    		Button button = new Button(view.getContext());
+    		button.setTextSize(10);
+    		button.setText(code.getValue());
+    		button.setTag(code.getName());
+    		
+    		layout.addView(button);
+    		
+    		i++;
+    	}
+    }
     
     public Lesson createLesson(View view, Lesson lesson) {
     	this.lesson = lesson;
