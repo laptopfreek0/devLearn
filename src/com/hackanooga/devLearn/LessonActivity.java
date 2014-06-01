@@ -58,6 +58,11 @@ public class LessonActivity extends Activity {
     				FragmentJavascriptBasicPage2 fragment;
     				fragment = new FragmentJavascriptBasicPage2();
     				fragmentTransaction.replace(R.id.fragment_container, fragment);
+	    		} else if (lesson_page == 3) {
+	    			Log.i("Page", "Page 3");
+	    			FragmentJavascriptBasicPage3 fragment;
+	    			fragment = new FragmentJavascriptBasicPage3();
+	    			fragmentTransaction.replace(R.id.fragment_container, fragment);
 	    		}
 	    		
 	    	} else {

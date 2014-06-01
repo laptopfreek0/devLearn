@@ -1,5 +1,6 @@
 package com.hackanooga.devLearn.lessons;
 
+import com.hackanooga.devLearn.LessonActivity;
 import com.hackanooga.devLearn.R;
 
 import android.os.Bundle;
@@ -17,9 +18,16 @@ public class FragmentOutputView extends FragmentBasicClass {
 		
 		WebView output = (WebView) view.findViewById(R.id.output_webview);
 		output.getSettings().setJavaScriptEnabled(true);
-		// If we want to do alert uncomment below line
-		//output.setWebChromeClient(new WebChromeClient());
-		output.loadData(FragmentJavascriptBasicPage1.lesson.getHtmlSource(), "text/html", "utf-8");
+		if(LessonActivity.lesson_page == 1) {
+			// Page 1
+			output.loadData(FragmentJavascriptBasicPage1.lesson.getHtmlSource(), "text/html", "utf-8");
+		} else if (LessonActivity.lesson_page == 3) {
+			// Page 3
+				// Note alert requires ChromeClient which is 4.2+
+			output.setWebChromeClient(new WebChromeClient());
+			output.loadData(FragmentJavascriptBasicPage3.lesson.getHtmlSource(), "text/html", "utf-8");
+		}
+		
 
 		return view;
 	}
