@@ -23,6 +23,8 @@ public class FragmentJavascriptBasicPage1 extends FragmentBasicClass {
 		lesson = new Lesson();
 		lesson.setIntroduction("<script>\nThe Script tag is used tell the browser to execute the following javascript code.");
 		lesson.setHtmlSource("<html><body><script>document.write('Hello World!');</script></body</html>");
+			// For Javascript Alert
+		//lesson.setHtmlSource("<html><body><script>alert('Hello World!');</script></body</html>");
 		lesson.setHtmlTruncatedSource("<html>\n\t<body>\n\t\t...\n\t\t<script>\n\t\t\tdocument.write('Hellow World!');\n\t\t</script>\n\t</body>\n</html>");
 		
 		createLesson(view, lesson);
