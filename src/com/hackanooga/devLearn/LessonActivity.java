@@ -21,7 +21,6 @@ public class LessonActivity extends Activity {
 	public static int total_lesson_pages = 10;
 	private String packagename;
 	private static ImageView[] lives_icons;
-	private static int lost_heart;
 	private String lesson_text;
 	private String language_text;
 	
@@ -35,14 +34,6 @@ public class LessonActivity extends Activity {
 	    // Set Text for Title
 	    TextView text = (TextView) findViewById(R.id.textTitle);
 	    text.setText(language_text + ": " + lesson_text);
-	    
-	    // Setup Lives
-	    lives_icons = new ImageView[lives];
-	    lives_icons[0] = (ImageView) findViewById(R.id.imageViewHeart3);
-	    lives_icons[1] = (ImageView) findViewById(R.id.imageViewHeart2);
-	    lives_icons[2] = (ImageView) findViewById(R.id.imageViewHeart1);
-	    packagename = this.getPackageName();
-	    lost_heart = getResources().getIdentifier(packagename + ":/drawable/" + R.drawable.noheart, null, null);
 	    
 	    updateFragment();
 	
@@ -91,28 +82,6 @@ public class LessonActivity extends Activity {
 	
 	public void updateProgressBar(int percentage) {
 		// Update Progress bar
-	}
-	
-	public int getScore() {
-		return score;
-	}
-	
-	static public boolean liveLost() {
-		if(lives == 0) {
-			// Lesson Over/ Restart
-			return false;
-		} else {
-			if (lives == 3) {
-				lives_icons[0].setImageResource(lost_heart);
-			} else if ( lives == 2) {
-				lives_icons[1].setImageResource(lost_heart);
-			} else if (lives == 1) {
-				lives_icons[2].setImageResource(lost_heart);
-				
-			}
-			lives--;
-			return true;
-		}
 	}
 
 }
