@@ -1,5 +1,7 @@
 package com.hackanooga.devLearn.lessons;
 
+import java.util.ArrayList;
+
 import org.apache.http.NameValuePair;
 
 import com.hackanooga.devLearn.LessonActivity;
@@ -92,7 +94,38 @@ public class FragmentBasicClass extends Fragment{
     public OnClickListener quizCheckHandler = new OnClickListener() {
     	@Override
     	public void onClick(View v) {
-    		((Button) v).setText("Continue");
+    		Button btn = (Button) v;
+    		if(btn.getText().equals("Check")) {
+    			((Button) v).setText("Continue");
+    			
+    			// Check Code Answers
+    			LinearLayout layout = (LinearLayout)((RelativeLayout)v.getParent()).findViewById(R.id.quiz_code);
+    			boolean correct = true;
+    			ArrayList<String> answers = quiz.getAnswer();
+    			for(int i = 0; i < layout.getChildCount(); i++) {
+    				View child = layout.getChildAt(i);
+    				if (child instanceof Button) {
+    					
+    					if (!((String)child.getTag()).equals(answers.get(i)))
+						{
+    						correct = false;
+    						break;
+						}
+    				} else {
+    					// Error
+    					correct = false;
+    				}
+    			}
+    			if (correct) {
+    				updateScore(quiz.getPoints());
+    			} else {
+    				looseLife(); 
+    			}
+    			
+    		} else {
+    			advanceLesson();
+    		}
+    		
     	}
     };
     
