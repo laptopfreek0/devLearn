@@ -25,7 +25,7 @@ public class FragmentJavascriptBasicPage1 extends FragmentBasicClass {
 		lesson.setHtmlSource("<html><body><script>document.write('Hello World!');</script></body</html>");
 			// For Javascript Alert
 		//lesson.setHtmlSource("<html><body><script>alert('Hello World!');</script></body</html>");
-		lesson.setHtmlTruncatedSource("<html>\n\t<body>\n\t\t...\n\t\t<script>\n\t\t\tdocument.write('Hellow World!');\n\t\t</script>\n\t</body>\n</html>");
+		lesson.setHtmlTruncatedSource("<html>\n\t<body>\n\t\t...\n\t\t<script>\n\t\t\tdocument.write('Hello World!');\n\t\t</script>\n\t</body>\n</html>");
 		
 		createLesson(view, lesson);
 		
