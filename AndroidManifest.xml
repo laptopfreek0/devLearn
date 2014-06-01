@@ -36,7 +36,7 @@
             android:label="@string/title_lesson_list" >
         </activity>
         <activity
-            android:name="com.hackanooga.devLearn.LanguageDetailActivity"
+            android:name="com.hackanooga.devLearn.LessonListActivity"
             android:label="@string/title_lesson_detail"
             android:parentActivityName="com.hackanooga.devLearn.LanguageListActivity" >
             <meta-data

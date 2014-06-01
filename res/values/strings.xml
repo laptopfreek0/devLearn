@@ -15,5 +15,6 @@
     <string name="title_lesson_list">Lessons</string>
     <string name="title_lesson_detail">lesson Detail</string>
     <string name="select_language">I want to learn</string>
+    <string name="select_lesson">Let me begin learning: </string>
 
 </resources>
