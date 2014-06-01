@@ -39,9 +39,6 @@
             android:name="com.hackanooga.devLearn.LessonListActivity"
             android:label="@string/title_lesson_detail"
             android:parentActivityName="com.hackanooga.devLearn.LanguageListActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.hackanooga.devLearn.LanguageListActivity" />
         </activity>
     </application>
 
