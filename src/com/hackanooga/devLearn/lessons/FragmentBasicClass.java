@@ -77,12 +77,36 @@ public class FragmentBasicClass extends Fragment{
     		button.setTextSize(10);
     		button.setText(code.getValue());
     		button.setTag(code.getName());
+    		button.setOnClickListener(codeClickHandler);
     		
     		layout.addView(button);
     		
     		i++;
     	}
     }
+    
+    public OnClickListener codeClickHandler = new OnClickListener() {
+    	
+    	@Override
+    	public void onClick(View v) {
+    		Button code = (Button)v;
+    		code.setVisibility(View.INVISIBLE);
+    		String html = code.getText().toString();
+    		String key = (String)code.getTag();
+    		
+    		LinearLayout layout = (LinearLayout)v.findViewById(R.id.quiz_code);
+    		for (int i = 0; i < layout.getChildCount(); i++) {
+    			View view = layout.getChildAt(i);
+    			
+    			if (view instanceof Button) {
+    				
+    			} else {
+    				
+    			}
+    		}
+    		//TODO: Loop through the blank layouts
+    	}
+    };
     
     public Lesson createLesson(View view, Lesson lesson) {
     	this.lesson = lesson;
