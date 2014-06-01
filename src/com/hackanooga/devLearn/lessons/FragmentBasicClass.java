@@ -116,9 +116,16 @@ public class FragmentBasicClass extends Fragment{
     					correct = false;
     				}
     			}
+    			TextView congrats = (TextView)((RelativeLayout)v.getParent()).findViewById(R.id.congrats_text);
     			if (correct) {
+    				congrats.setText("Congratulations! This is correct");
+    				congrats.setTextColor(Color.GREEN);
+    				congrats.setVisibility(TextView.VISIBLE);
     				updateScore(quiz.getPoints());
     			} else {
+    				congrats.setText("I'm so sorry that is incorrect.");
+    				congrats.setTextColor(Color.RED);
+    				congrats.setVisibility(TextView.VISIBLE);
     				looseLife(); 
     			}
     			
