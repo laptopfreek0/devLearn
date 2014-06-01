@@ -19,8 +19,6 @@ public class LessonActivity extends Activity {
 	public static int lives = 3;
 	public static int lesson_page = 0;
 	public static int total_lesson_pages = 10;
-	private String packagename;
-	private static ImageView[] lives_icons;
 	private String lesson_text;
 	private String language_text;
 	

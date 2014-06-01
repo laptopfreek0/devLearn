@@ -25,7 +25,7 @@ public class LessonListActivity  extends Activity {
 	    
 	    final int lesson_array_id = this.getIntent().getIntExtra(LanguageListActivity.language_id, -1);
 	    language_text = this.getIntent().getStringExtra(LanguageListActivity.language_text);
-	    TextView tv = (TextView) findViewById(R.id.textView1);
+	    TextView tv = (TextView) findViewById(R.id.lesson_textView);
 	    tv.setText(tv.getText() + " " + language_text);
 	    
 	    lessonList = this.getResources().getStringArray(lesson_array_id);
