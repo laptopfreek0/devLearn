@@ -20,6 +20,8 @@ import android.widget.Toast;
 
 public class FragmentBasicClass extends Fragment{
 	
+	private Lesson lesson;
+	
     public OnClickListener nextListener = new OnClickListener() {
 
 		@Override
@@ -37,6 +39,7 @@ public class FragmentBasicClass extends Fragment{
     };
     
     public Lesson createLesson(View view, Lesson lesson) {
+    	this.lesson = lesson;
     	TextView tv = (TextView) view.findViewById(R.id.lesson_textView);
     	tv.setText(lesson.getIntroduction());
     	

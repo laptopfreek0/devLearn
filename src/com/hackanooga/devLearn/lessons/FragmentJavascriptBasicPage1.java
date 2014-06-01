@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.TabHost;
 
 public class FragmentJavascriptBasicPage1 extends FragmentBasicClass {
+	
+	public static Lesson lesson;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_javascript_basic_page_1, container, false);
@@ -18,10 +20,10 @@ public class FragmentJavascriptBasicPage1 extends FragmentBasicClass {
 		btn.setOnClickListener(nextListener);
 		
 		// Setup Lesson
-		Lesson lesson = new Lesson();
+		lesson = new Lesson();
 		lesson.setIntroduction("<script>\nThe Script tag is used tell the browser to execute the following javascript code.");
 		lesson.setHtmlSource("<html><body><script>document.write('Hello World!');</script></body</html>");
-		lesson.setHtmlTruncatedSource("<html>\n</html>");
+		lesson.setHtmlTruncatedSource("<html>\n\t<body>\n\t\t...\n\t\t<script>\n\t\t\tdocument.write('Hellow World!');\n\t\t</script>\n\t</body>\n</html>");
 		
 		createLesson(view, lesson);
 		
