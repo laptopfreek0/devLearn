@@ -5,11 +5,16 @@ import com.hackanooga.devLearn.R;
 import com.hackanooga.devLearn.objects.Lesson;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,8 +40,47 @@ public class FragmentBasicClass extends Fragment{
     	TextView tv = (TextView) view.findViewById(R.id.lesson_textView);
     	tv.setText(lesson.getIntroduction());
     	
+    	Switch sw = (Switch) view.findViewById(R.id.source_switch);
+    	sw.setOnCheckedChangeListener(switch_listener);
+    	
+    	// Setup Source for first view
+    	source_setup();
+    	
     	return lesson;
     }
+    
+    private void source_setup() {
+	    FragmentManager fragmentManager = getFragmentManager();
+	    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+	    fragmentManager.beginTransaction();
+	    
+		FragmentSourceView fragment = new FragmentSourceView();
+		fragmentTransaction.replace(R.id.source_fragment_container, fragment);
+		fragmentTransaction.commit(); 
+    }
+    
+    public OnCheckedChangeListener switch_listener = new OnCheckedChangeListener() {
+
+		@Override
+		public void onCheckedChanged(CompoundButton buttonView,
+				boolean isChecked) {
+			if(isChecked) {
+				// Output
+			    FragmentManager fragmentManager = getFragmentManager();
+			    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+			    fragmentManager.beginTransaction();
+			    
+				FragmentOutputView fragment = new FragmentOutputView();
+				fragmentTransaction.replace(R.id.source_fragment_container, fragment);
+				fragmentTransaction.commit(); 
+			} else {
+				// Source
+				source_setup();
+			}
+			
+		}
+    	
+    };
     
     public void advanceLesson() {
     	((LessonActivity)getActivity()).updateFragment();
