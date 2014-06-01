@@ -18,5 +18,6 @@
     <string name="select_language">I want to learn</string>
     <string name="select_lesson">Let me begin learning: </string>
     <string name="default_score">0</string>
+    <string name="button_text_continue">Continue</string>
 
 </resources>
