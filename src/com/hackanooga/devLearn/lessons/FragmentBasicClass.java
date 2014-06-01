@@ -119,7 +119,6 @@ public class FragmentBasicClass extends Fragment{
     			TextView congrats = (TextView)((RelativeLayout)v.getParent()).findViewById(R.id.congrats_text);
     			if (correct) {
     				congrats.setText("Congratulations! This is correct");
-    				congrats.setTextColor(Color.GREEN);
     				congrats.setVisibility(TextView.VISIBLE);
     				updateScore(quiz.getPoints());
     			} else {

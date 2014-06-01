@@ -46,11 +46,11 @@ public class MainActivity extends Activity {
         
         progress = (ProgressBar)findViewById(R.id.tutorial_progress);
         
-        if (true) {
+/*        if (true) {
         	// Bypass Tutorial for coding
         	//TODO remove me at a later point in time
         	plusButtonListener.onClick(progress);
-        }
+        }*/
         
         
         
