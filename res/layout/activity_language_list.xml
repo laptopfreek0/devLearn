@@ -1,12 +1,27 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
- 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/select_language"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
     
     <ListView android:id="@+id/language_list_view" 
-              android:layout_height="match_parent"
-              android:layout_width="match_parent"/>
+        android:layout_marginLeft="16dp"
+    	android:layout_marginRight="16dp"
+    	android:layout_marginTop="10dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
 
-</RelativeLayout>
+</LinearLayout>
