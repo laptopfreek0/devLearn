@@ -40,6 +40,11 @@
             android:label="@string/title_lesson_detail"
             android:parentActivityName="com.hackanooga.devLearn.LanguageListActivity" >
         </activity>
+        <activity
+            android:name="com.hackanooga.devLearn.LessonActivity"
+            android:label="@string/title_lesson"
+            android:parentActivityName="com.hackanooga.devLearn.LessonListActivity" >
+        </activity>
     </application>
 
 </manifest>
