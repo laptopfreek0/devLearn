@@ -11,7 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:background="@color/header"
-        android:text="@string/button_text_continue"
+        android:text="@string/button_text_check"
         android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF" />
     
@@ -64,13 +64,5 @@
         android:orientation="horizontal" >
         
     </LinearLayout>
-
-    <Button
-        android:id="@+id/quiz_check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_continue"
-        android:layout_alignParentRight="true"
-        android:text="@string/button_text_check" />
 
 </RelativeLayout>

@@ -55,6 +55,9 @@ public class FragmentBasicClass extends Fragment{
     	
     	LinearLayout layout = (LinearLayout)view.findViewById(R.id.quiz_code);
     	
+    	Button btn = (Button) view.findViewById(R.id.btn_continue);
+    	btn.setOnClickListener(quizCheckHandler);
+    	
     	for (int i = 0; i < quiz.getAnswer().size(); i++) {
     		ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 2);
     		
@@ -85,6 +88,13 @@ public class FragmentBasicClass extends Fragment{
     		i++;
     	}
     }
+    
+    public OnClickListener quizCheckHandler = new OnClickListener() {
+    	@Override
+    	public void onClick(View v) {
+    		((Button) v).setText("Continue");
+    	}
+    };
     
     public OnClickListener codeClickHandler = new OnClickListener() {
     	
